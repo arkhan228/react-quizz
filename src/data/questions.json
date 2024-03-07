@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "question": "Which is the most popular JavaScript framework?",
+      "question": "Which is the most popular JavaScript framework/library?",
       "options": ["Angular", "React", "Svelte", "Vue"],
       "correctOption": 1,
       "points": 10
@@ -133,6 +133,291 @@
         "Each time the component is re-rendered"
       ],
       "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "What is ReactJS?",
+      "options": ["A library", "A framework", "A tool", "All of them"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the children prop?",
+      "options": [
+        "A property that adds child components to state",
+        "A property that lets you pass state to child components",
+        "A property that lets you pass components as data to other components",
+        "A property that lets you pass data to child elements"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "When to use useReducer instead of useState?",
+      "options": [
+        "When you need to manage more complex state in an app",
+        "When you want to replace Redux",
+        "When you have very few state variables",
+        "When you want to improve performance"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "What does JSX stand for?",
+      "options": [
+        "JavaScript HTML",
+        "JavaScript XML",
+        "JSON XML",
+        "HTML Script"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which tool converts JSX into HTML elements?",
+      "options": ["Babel", "JSX Editor", "XML Editor", "Jest"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How many types of components are there in React?",
+      "options": ["4", "3", "2", "1"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "What is the primary purpose of Virtual DOM?",
+      "options": [
+        "It makes DOM manipulations easier",
+        "It stores the DOM locally",
+        "It boosts efficiency and performance",
+        "It doesn't make any difference"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "Where is cleanup function used?",
+      "options": ["useState", "useEffect", "useReducer", "useCallback"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Which of the following is correct?",
+      "options": [
+        "State is immutable",
+        "Props are immutable",
+        "Props are mutable",
+        "State & props are both mutable"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "How many phases does the lifecycle of a component have?",
+      "options": ["2", "3", "4", "5"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What does useRef do in React?",
+      "options": [
+        "Allow access to DOM elements",
+        "Allow access to state",
+        "Allow access to props",
+        "Allow access to lifecycle methods"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "What are controlled components?",
+      "options": [
+        "Components controlled by DOM",
+        "Components controlled by user",
+        "Components controlled by browser",
+        "Components controlled by state"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "Where does react hooks live?",
+      "options": [
+        "At the top of document",
+        "At the top of component",
+        "At the bottom of component",
+        "Inside a function"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What does lifting state up in React means?",
+      "options": [
+        "Moving shared state to the top of document",
+        "Moving shared state to a parent component",
+        "Moving shared state to the child component",
+        "Moving shared state to a common ancestor component"
+      ],
+      "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "How to implement conditional rendering in React?",
+      "options": [
+        "If-else",
+        "Ternary operator",
+        "Logical operators",
+        "All of them"
+      ],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "What do \"<>...</>\" represent in React?",
+      "options": ["React Fragment", "useRef", "SVGs", "useCallback"],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "What is prop drilling in React?",
+      "options": [
+        "Passing props to child component",
+        "Passing functions as props to child component",
+        "Passing props multiple levels to child component",
+        "All of them"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "Which is the correct way to pass a function \"handleClick()\" as props?",
+      "options": [
+        "<ChildComponent handleClick='handleClick' />",
+        "<ChildComponent onClick='handleClick' />",
+        "<ChildComponent handleClick={handleClick()} />",
+        "<ChildComponent onClick={handleClick} />"
+      ],
+      "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "Where are keys necessary",
+      "options": ["JSX Elements", "Lists", "Hooks", "components"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What does useEffect do?",
+      "options": [
+        "Produce state updates",
+        "Produce side effects",
+        "Produce local variables",
+        "Produce local functions"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is derived state?",
+      "options": [
+        "Variables declared locally",
+        "Varibles derived from other variables",
+        "Variables derived from state variables",
+        "Variables declared outside of the component"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which lifecycle method allows to make requests for data in class components?",
+      "options": [
+        "contructor",
+        "componentDidMount",
+        "componentWillReceiveProps",
+        "componentWillUnmount"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Which of the following better describes React?",
+      "options": ["Imperative", "Integrated", "Closed", "Declarative"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "What package contains the render() function that renders a React element tree to the DOM?",
+      "options": ["React", "ReactDOM", "RenderDOM", "DOM"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "How to add an inline style in React?",
+      "options": [
+        "<h1 style=\"color: red\">Hello World</h1>",
+        "<h1 style={color: 'red'}>Hello World</h1>",
+        "<h1 style={{color: 'red'}}>Hello World</h1>",
+        "<h1 style={{{color: 'red'}}}>Hello World</h1>"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "What is the class component equivalent of an empty dependency array in useEffect?",
+      "options": [
+        "componentDidMount",
+        "componentDidUpdate",
+        "componentWillReceiveProps",
+        "componentWillUnmount"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "What will not cause a React component to re-render?",
+      "options": [
+        "It's state changes",
+        "It's props changes",
+        "It's Parent componnet re-renders",
+        "It's sibling component re-renders"
+      ],
+      "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "What command can be used to generate a React project?",
+      "options": [
+        "npm create-app react-app",
+        "npm create-react-app react-app",
+        "npx install react-app",
+        "npx create-react-app react-app"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "What is the process of updating the view in React?",
+      "options": [
+        "Updated fiber tree => Reconciliation => Updated virtualDom => DOM update => Browser paint",
+        "Updated virtualDom => Reconciliation => DOM update => Updated fiber tree => Browser paint",
+        "Updated virtualDom => Reconciliation => Updated fiber tree => DOM update => Browser paint",
+        "Updated fiber tree => Updated virtualDom => Reconciliation => DOM update => Browser paint"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "What does PropTypes do?",
+      "options": [
+        "Validates the type of Props",
+        "Changes the type of Props",
+        "Removes the type of props",
+        "Nothing"
+      ],
+      "correctOption": 0,
       "points": 20
     }
   ]

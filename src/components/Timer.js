@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 
 export default function Timer({ time, dispatch }) {
-  let min, sec;
-  min = Math.floor(time / 60);
-  sec = time % 60;
+  const min = Math.floor(time / 60);
+  const sec = time % 60;
 
   useEffect(() => {
     const interval = setInterval(() => {

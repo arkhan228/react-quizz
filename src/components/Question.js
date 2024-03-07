@@ -1,26 +1,23 @@
 import Options from './Options';
 
-export default function Question({
-  questions,
-  curQuest,
-  answer,
-  dispatch,
-  children,
-}) {
+/**
+ * Renders a question component with the provided question, answer, and dispatch function.
+ *
+ * @param {object} question - the question object
+ * @param {number|null} answer - The index of the selected answer, or null if no answer has been selected.
+ * @param {function} dispatch - the dispatch function
+ * @return {JSX.Element} the rendered question component
+ */
+export default function Question({ question, answer, dispatch }) {
   return (
     <>
       <article>
-        <h4>{questions[curQuest].question}</h4>
-        {questions?.length > 0 && (
-          <Options
-            questions={questions}
-            curQuest={curQuest}
-            answer={answer}
-            dispatch={dispatch}
-          />
-        )}
+        <div className='question'>
+          <h4>{question.question}</h4>
+          <p>{question.points} Points</p>
+        </div>
+        <Options question={question} answer={answer} dispatch={dispatch} />
       </article>
-      <footer>{children}</footer>
     </>
   );
 }
