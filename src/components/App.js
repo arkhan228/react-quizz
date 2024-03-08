@@ -217,15 +217,17 @@ export default function App() {
       )
         .then(res => res.json())
         .then(data => {
+          const { questions } = data;
           let quizData;
 
           // Shuffle questions if shuffle is set to 'questions' or 'both'
-          if (shuffle === 'questions' || shuffle === 'both') shuffleArray(data);
+          if (shuffle === 'questions' || shuffle === 'both')
+            shuffleArray(questions);
 
           // Filter questions based on difficulty
-          const easyQuestions = data.filter(q => q.points === 10);
-          const mediumQuestions = data.filter(q => q.points === 20);
-          const hardQuestions = data.filter(q => q.points === 30);
+          const easyQuestions = questions.filter(q => q.points === 10);
+          const mediumQuestions = questions.filter(q => q.points === 20);
+          const hardQuestions = questions.filter(q => q.points === 30);
 
           // Set questions based on difficulty
           if (difficulty === 'easy') quizData = easyQuestions;
@@ -258,7 +260,10 @@ export default function App() {
           // Update state with fetched data
           dispatch({ type: 'dataRecieved', payload: quizData });
         })
-        .catch(err => dispatch({ type: 'dataFailed' }));
+        .catch(err => {
+          console.error(err);
+          dispatch({ type: 'dataFailed' });
+        });
     }
 
     // Do not fetch data on component mount
