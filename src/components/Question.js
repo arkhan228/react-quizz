@@ -1,3 +1,4 @@
+import { useQuiz } from '../contexts/QuizContext';
 import Options from './Options';
 
 /**
@@ -8,15 +9,16 @@ import Options from './Options';
  * @param {function} dispatch - the dispatch function
  * @return {JSX.Element} the rendered question component
  */
-export default function Question({ question, answer, dispatch }) {
+export default function Question() {
+  const { questions, curQuest } = useQuiz();
   return (
     <>
       <article>
         <div className='question'>
-          <h4>{question.question}</h4>
-          <p>{question.points} Points</p>
+          <h4>{questions[curQuest].question}</h4>
+          <p>{questions[curQuest].points} Points</p>
         </div>
-        <Options question={question} answer={answer} dispatch={dispatch} />
+        <Options />
       </article>
     </>
   );

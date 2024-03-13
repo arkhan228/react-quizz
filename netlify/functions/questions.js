@@ -1,4 +1,3 @@
-// hello-world.js
 exports.handler = async (event, context) => {
   const questions = require('../../data/questions.json');
   return {

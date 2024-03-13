@@ -1,11 +1,3 @@
-export default function Main({
-  status,
-  curQuest,
-  numQuest,
-  curPoints,
-  numPoints,
-  answer,
-  children,
-}) {
+export default function Main({ children }) {
   return <main className='main'>{children}</main>;
 }

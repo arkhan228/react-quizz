@@ -1,15 +1,16 @@
+import { useQuiz } from '../contexts/QuizContext';
 import Stats from './Stats';
 
-export default function Intro({
-  status,
-  difficulty,
-  shuffle,
-  dispatch,
-  numQuestions,
-  statsDisplayed,
-  highscores,
-  takenQuiz,
-}) {
+export default function Intro() {
+  const {
+    status,
+    difficulty,
+    shuffle,
+    dispatch,
+    numQuestions,
+    statsDisplayed,
+    takenQuiz,
+  } = useQuiz();
   return (
     <article>
       <div className='start'>
@@ -46,7 +47,7 @@ export default function Intro({
                 }
                 disabled={takenQuiz[difficulty] === 0}
               >
-                <option value='neither'>None</option>
+                <option value='none'>None</option>
                 <option value='questions'>Questions</option>
                 <option value='options'>Options</option>
                 <option value='both'>Both</option>
@@ -57,9 +58,7 @@ export default function Intro({
           <h3> {numQuestions} questions to test your react mastery</h3>
         )}
       </div>
-      {statsDisplayed && (
-        <Stats highscores={highscores} takenQuiz={takenQuiz} />
-      )}
+      {statsDisplayed && <Stats />}
     </article>
   );
 }

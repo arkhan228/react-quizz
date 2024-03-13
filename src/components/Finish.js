@@ -1,13 +1,10 @@
+import { useQuiz } from '../contexts/QuizContext';
 import Stats from './Stats';
 
-export default function Finish({
-  curPoints,
-  numPoints,
-  highscores,
-  takenQuiz,
-  difficulty,
-  statsDisplayed,
-}) {
+export default function Finish() {
+  const { curPoints, numPoints, highscores, difficulty, statsDisplayed } =
+    useQuiz();
+
   const percentage = ((curPoints * 100) / numPoints).toFixed(2);
   return (
     <article>
@@ -23,9 +20,7 @@ export default function Finish({
         </p>
       </div>
       <p className='highscore'>{`Highscore on current (${difficulty}) difficulty: ${highscores[difficulty]}`}</p>
-      {statsDisplayed && (
-        <Stats highscores={highscores} takenQuiz={takenQuiz} />
-      )}
+      {statsDisplayed && <Stats />}
     </article>
   );
 }

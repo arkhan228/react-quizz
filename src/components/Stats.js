@@ -1,4 +1,7 @@
-function Stats({ highscores, takenQuiz }) {
+import { useQuiz } from '../contexts/QuizContext';
+
+function Stats() {
+  const { highscores, takenQuiz } = useQuiz();
   const difficulties = Object.keys(highscores);
   return (
     <div className='stats'>

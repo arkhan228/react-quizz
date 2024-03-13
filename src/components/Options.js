@@ -1,3 +1,5 @@
+import { useQuiz } from '../contexts/QuizContext';
+
 /**
  * Render options for a given question and handle user interaction.
  *
@@ -6,7 +8,11 @@
  * @param {function} dispatch - function to dispatch actions
  * @return {JSX.Element} the options UI
  */
-export default function Options({ question, answer, dispatch }) {
+export default function Options() {
+  const { questions, answers, curQuest, dispatch } = useQuiz();
+  const question = questions[curQuest];
+  const answer = answers[curQuest];
+
   return (
     <div className='options'>
       {question.options.map((option, i) => {

@@ -20,6 +20,18 @@ html {
   font-size: 62.5%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  @media screen and (max-width: 43.75em) {
+    font-size: 50%;
+  }
+
+  @media screen and (max-width: 34em) {
+    font-size: 43.75%;
+  }
+
+  @media screen and (max-width: 21.5em) {
+    font-size: 37.5%;
+  }
 }
 
 body {
@@ -39,6 +51,8 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 .main {
@@ -302,4 +316,38 @@ progress {
 .counter * {
   font-size: inherit;
   padding: 0.8rem;
+}
+
+@media screen and (max-width: 43.75em) {
+  .app-header {
+    width: 46rem;
+  }
+
+  .main {
+    width: 44rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  img {
+    width: 10rem;
+  }
+
+  .progress {
+    width: 42rem;
+  }
 }

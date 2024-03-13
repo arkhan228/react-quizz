@@ -1,4 +1,7 @@
-export default function Button({ dispatch, disable = false, children }) {
+import { useQuiz } from '../contexts/QuizContext';
+
+export default function Button({ disable = false, children }) {
+  const { dispatch } = useQuiz();
   return (
     <button
       className='btn'
