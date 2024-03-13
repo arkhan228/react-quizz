@@ -234,8 +234,8 @@ progress {
 }
 
 .stats {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   margin-bottom: 3.2rem;
   font-size: 2rem;
 }
@@ -244,8 +244,12 @@ progress {
   text-align: center;
 }
 
+.stats p {
+  margin-bottom: 0.7rem;
+}
+
 .stats p:first-child {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .highscore {
