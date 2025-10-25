@@ -202,9 +202,7 @@ function QuizProvider({ children }) {
   useEffect(() => {
     // Fetch data from JSON server
     function fetchData() {
-      fetch(
-        'https://react-quizz-rhman.netlify.app/.netlify/functions/questions'
-      )
+      fetch(`${window.location.origin}/.netlify/functions/questions`)
         .then(res => res.json())
         .then(data => {
           const { questions } = data;
